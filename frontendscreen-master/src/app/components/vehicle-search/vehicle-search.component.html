@@ -1,0 +1,33 @@
+<div>
+  <p>
+  {{title}}
+  </p>
+  <p>
+    <a *ngFor="let vehicle of vehicles" [routerLink]="['/vehicle-detail',vehicle.StockNumber]">
+    <div class="searchCard">
+      <md-card> 
+        <md-grid-list cols="2" rowHeight ="40px">
+          
+          <md-grid-tile > 
+            <md-card-header>
+              <h2>{{vehicle.Year}} {{vehicle.Make}} {{vehicle.Model}}  </h2>
+            </md-card-header>
+          </md-grid-tile>
+
+          <md-grid-tile rowspan="2"> 
+            <img md-card-sm-image src='https://az30404.vo.msecnd.net/publicstockimages/{{vehicle.StockNumber}}/{{vehicle.StockNumber}}_FULL_LF-E.jpg'>
+          </md-grid-tile>
+
+          <md-grid-tile >  
+            <h5>{{vehicle.BodyStyle}}</h5>
+          </md-grid-tile>
+
+        </md-grid-list >
+
+        <button md-button>View Details</button>
+
+      </md-card>
+     </div>
+    </a>
+  </p>
+</div>

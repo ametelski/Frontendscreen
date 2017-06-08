@@ -1,0 +1,21 @@
+<div *ngIf="vehicle">
+  <md-card>
+    <md-card-header>
+      <img md-card-avatar src="{{thumbImageUrl}}" />
+      <md-card-title>{{vehicle.Year}} {{vehicle.Make}} {{vehicle.DisplayName}}</md-card-title>
+      <md-card-subtitle>{{vehicle.BodyStyle}}</md-card-subtitle>
+    </md-card-header>
+    <img md-card-image src="{{mainImageUrl}}">
+    <md-card-content>
+      <p>{{vehicle.City}} {{vehicle.StateAbbreviation}}</p>
+      <p>VIN: {{vehicle.Vin}}</p>
+      <p>Stock Number: {{vehicle.StockNumber}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <a md-button routerLink="/vehicle-search">BACK TO SEARCH</a>
+    </md-card-actions>
+  </md-card>
+</div>
+
+
+

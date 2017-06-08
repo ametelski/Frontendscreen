@@ -1,0 +1,15 @@
+<div>
+  <md-toolbar color="primary">
+    <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>menu</md-icon>
+    </button>
+    <md-menu x-position="before" #menu="mdMenu">
+      <a md-button routerLink="">Home</a><br />
+      <a md-button routerLink="/vehicle-search">Vehicle Search</a><br />
+      <a md-button routerLink="/vehicle-detail/0">Vehicle Detail</a>
+    </md-menu>
+    <span>{{title}}</span>
+  </md-toolbar>
+</div>
+<router-outlet></router-outlet>
+
